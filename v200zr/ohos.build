@@ -1,10 +1,10 @@
 {
   "parts": {
-    "device_v200rz": {
+    "device_v200zr": {
       "module_list": [
-        "//device/board/fnlink/v200rz:v200rz"
+        "//device/soc/bestechnic/bes2600:pack_flash_gui"
       ]
     }
   },
-  "subsystem": "device_v200rz"
+  "subsystem": "device_v200zr"
 }
