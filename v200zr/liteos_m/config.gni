@@ -48,6 +48,7 @@ if (product_path != "") {
   pack_burn = product_conf.pack_burn
 }
 flash_size = 16
+
 # Board related common compile flags.
 board_cflags = [
   "-mcpu=cortex-m33",
@@ -68,13 +69,11 @@ board_cflags = [
   "-DLFS_MAX_OPEN_DIRS=32",
   "-DMBEDTLS_CMSIS_FILE=\"rtos/liteos/liteos_m/kal/cmsis/cmsis_os.h\"",
   "-DLOSCFG_BASE_CORE_HILOG",
-  "-DPTHREAD_KEYS_MAX=128"
+  "-DPTHREAD_KEYS_MAX=128",
 ]
 
 board_cxx_flags = board_cflags
-board_ld_flags = [
-  "-L${ohos_root_path}out/${board_name}/${product_name}/libs",
-]
+board_ld_flags = [ "-L${ohos_root_path}out/${board_name}/${product_name}/libs" ]
 
 # fs functions support
 wrap_fs_api = "true"
@@ -85,20 +84,20 @@ foreach(fs, fs_list) {
 }
 
 if (wrap_fs_api == "true") {
-   board_ld_flags += [
-     "-Wl,--wrap=_calloc_r",
-     "-Wl,--wrap=_malloc_r",
-     "-Wl,--wrap=_realloc_r",
-     "-Wl,--wrap=_reallocf_r",
-     "-Wl,--wrap=_free_r",
-     "-Wl,--wrap=_memalign_r",
-     "-Wl,--wrap=_malloc_usable_size_r",
-     "-Wl,--wrap=printf",
-     "-Wl,--wrap=sprintf",
-     "-Wl,--wrap=snprintf",
-     "-Wl,--wrap=vsnprintf",
-     "-Wl,--wrap=vprintf",
-     ]
+  board_ld_flags += [
+    "-Wl,--wrap=_calloc_r",
+    "-Wl,--wrap=_malloc_r",
+    "-Wl,--wrap=_realloc_r",
+    "-Wl,--wrap=_reallocf_r",
+    "-Wl,--wrap=_free_r",
+    "-Wl,--wrap=_memalign_r",
+    "-Wl,--wrap=_malloc_usable_size_r",
+    "-Wl,--wrap=printf",
+    "-Wl,--wrap=sprintf",
+    "-Wl,--wrap=snprintf",
+    "-Wl,--wrap=vsnprintf",
+    "-Wl,--wrap=vprintf",
+  ]
 }
 
 # Board related headfiles search path.
@@ -109,7 +108,7 @@ board_include_dirs = [
 board_include_dirs += []
 
 # Board adapter dir for OHOS components.
-board_adapter_dir = "${ohos_root_path}device/board/fnlink/fgv200zrxx"
+board_adapter_dir = "${ohos_root_path}device/soc/bestechnic"
 
 # Sysroot path.
 board_configed_sysroot = ""
