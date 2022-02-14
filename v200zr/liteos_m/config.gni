@@ -47,7 +47,7 @@ if (product_path != "") {
   bsp_bin_list = product_conf.bsp_bin_list
   pack_burn = product_conf.pack_burn
 }
-flash_size = 16
+flash_size = 32
 
 # Board related common compile flags.
 board_cflags = [
