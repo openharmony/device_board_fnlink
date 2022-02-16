@@ -70,7 +70,6 @@ board_cflags = [
   "-DMBEDTLS_CMSIS_FILE=\"rtos/liteos/liteos_m/kal/cmsis/cmsis_os.h\"",
   "-DLOSCFG_BASE_CORE_HILOG",
   "-DPTHREAD_KEYS_MAX=128",
-  "-DDEV_AUTH_DEBUG_PRINTF",
 ]
 
 board_cxx_flags = board_cflags
