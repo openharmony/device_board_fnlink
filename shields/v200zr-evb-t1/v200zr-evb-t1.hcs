@@ -1,19 +1,5 @@
 #include "../../hcs/v200zr.hcs"
 root {
-    /*device_info {
-        platform :: host {
-            device_uart :: device {
-                uart2 :: deviceNode {
-                    policy = 2;                         
-                    priority = 40;                      
-                    permission = 0644;                  
-                    moduleName = "BES_UART_MODULE_HDF";   
-                    serviceName = "HDF_PLATFORM_UART_2";
-                    deviceMatchAttr = "uart2_config";
-                }
-            }
-        }
-    }*/
     platform {
         gpio_config {
             match_attr = "gpio_config";
@@ -52,22 +38,57 @@ root {
                 mode = 0;
             }
         }
-        /*uart_config {
-            template uart_controller {
-                match_attr = "";
+        pwm_config {
+            pwm0 {
+               match_attr = "pwm0_config";
+               pwmId = 0;
+               pwmPin = 34;
+            }
+        }
+        spi_config {
+            spi0 {
+                match_attr = "spi0_config";
+                busNum = 0;
+                speed = 2000000;
+                spiClkPin = 40;
+                spiMosiPin = 43;
+                spiMisoPin = 42;
+                spiCsPin = 41;
+                csNum = 0;
+                mode = 0;
+                slave = false;
+                spiCsSoft = 0;
+                dataSize = 8;
+                transmode = 1;
+            }
+            spi1 {
+                match_attr = "spi1_config";
+                busNum = 1;
+                speed = 2000000;
+                spiClkPin = 90;
+                spiMosiPin = 93;
+                spiMisoPin = 92;
+                spiCsPin = 91;
+                csNum = 0;
+                mode = 0;
+                slave = false;
+                spiCsSoft = 0;
+                dataSize = 8;
+                transmode = 1;
+            }
+        }
+        uart_config {
+            uart0 {
+                match_attr = "uart0_config";
                 num = 0;
-                baudrate = 115200; 
+                baudRate = 921600;
                 parity = 0;
                 stopBit = 0;
                 data = 3;
-                txDMA = false;
-                rxDMA = false;
+                txDMA = true;
+                rxDMA = true;
             }
-            uart2 :: uart_controller {
-                match_attr = "uart2_config";
-                num = 2;
-            }
-        }*/
+        }
     }
     display {
         panel_config {
