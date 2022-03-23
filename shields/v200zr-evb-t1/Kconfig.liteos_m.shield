@@ -18,6 +18,6 @@ config SHIELD_V200ZR_EVB_T1
     select DRIVERS_HDF_PLATFORM_I2C
     select DRIVERS_HDF_PLATFORM_MIPI_DSI
     select FS_LITTLEFS
-    select DRIVERS_HDF_CONFIG_MACRO
+    # select DRIVERS_HDF_CONFIG_MACRO
     # def_bool $(shields_list_contains,fgv200zr-l1)
 
