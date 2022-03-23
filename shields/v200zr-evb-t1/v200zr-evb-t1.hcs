@@ -11,19 +11,6 @@ root {
             pinNum = 2;
         }
         i2c_config {
-            i2c0 {
-                match_attr = "i2c0_config";
-                port = 0;
-                speed = 200000;
-                // TSP_SCL/SDA - I2C0 = GPIO04/GPIO05
-                sclPin = 4;
-                sdaPin = 5;
-                useDma = 0;
-                useSync = 1;
-                asMaster = 1;
-                address_width = 8;
-                mode = 0;
-            }
             i2c1 {
                 match_attr = "i2c1_config";
                 port = 1;
