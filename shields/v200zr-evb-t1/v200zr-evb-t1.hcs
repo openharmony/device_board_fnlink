@@ -25,57 +25,6 @@ root {
                 mode = 0;
             }
         }
-        pwm_config {
-            pwm0 {
-               match_attr = "pwm0_config";
-               pwmId = 0;
-               pwmPin = 34;
-            }
-        }
-        spi_config {
-            spi0 {
-                match_attr = "spi0_config";
-                busNum = 0;
-                speed = 2000000;
-                spiClkPin = 40;
-                spiMosiPin = 43;
-                spiMisoPin = 42;
-                spiCsPin = 41;
-                csNum = 0;
-                mode = 0;
-                slave = false;
-                spiCsSoft = 0;
-                dataSize = 8;
-                transmode = 1;
-            }
-            spi1 {
-                match_attr = "spi1_config";
-                busNum = 1;
-                speed = 2000000;
-                spiClkPin = 90;
-                spiMosiPin = 93;
-                spiMisoPin = 92;
-                spiCsPin = 91;
-                csNum = 0;
-                mode = 0;
-                slave = false;
-                spiCsSoft = 0;
-                dataSize = 8;
-                transmode = 1;
-            }
-        }
-        uart_config {
-            uart0 {
-                match_attr = "uart0_config";
-                num = 0;
-                baudRate = 921600;
-                parity = 0;
-                stopBit = 0;
-                data = 3;
-                txDMA = true;
-                rxDMA = true;
-            }
-        }
     }
     display {
         panel_config {
