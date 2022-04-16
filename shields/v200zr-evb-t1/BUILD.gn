@@ -12,7 +12,7 @@
 # limitations under the License.
 
 if (ohos_kernel_type == "liteos_m") {
-  import("//drivers/adapter/khdf/liteos_m/hdf_hcs.gni")
+  import("//drivers/adapter/khdf/liteos_m/hdf.gni")
   module_switch = defined(LOSCFG_SHIELD_V200ZR_EVB_T1)
   macro_switch = defined(LOSCFG_DRIVERS_HDF_CONFIG_MACRO)
   module_name = get_path_info(rebase_path("."), "name")
@@ -21,5 +21,6 @@ if (ohos_kernel_type == "liteos_m") {
   }
   hdf_driver(module_name) {
     hcs_sources = [ "v200zr-evb-t1.hcs" ]
+    special_visibility = [ "//device/soc/bestechnic/bes2600/liteos_m/*" ]
   }
 }
