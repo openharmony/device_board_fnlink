@@ -16,7 +16,6 @@ import("//kernel/liteos_m/liteos.gni")
 module_name = get_path_info(rebase_path("."), "name")
 kernel_module(module_name) {
   sources = [ "at_wifi.c" ]
-  include_dirs = [
-    "//foundation/communication/wifi_lite/interfaces/wifiservice/",
-  ]
+  include_dirs =
+      [ "//foundation/communication/wifi_lite/interfaces/wifiservice/" ]
 }
