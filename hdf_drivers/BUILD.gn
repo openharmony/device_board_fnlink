@@ -23,5 +23,6 @@ module_group(module_name) {
     "spi",
     "uart",
     "watchdog",
+    "core",
   ]
 }

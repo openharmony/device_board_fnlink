@@ -18,8 +18,10 @@ if (ohos_kernel_type == "liteos_m") {
     modules = [
       "v200zr",
       "drivers",
-      "hdf_drivers",
       "shields",
     ]
+  }
+  if (defined(LOSCFG_DRIVERS_HDF_CONFIG_MACRO)) {
+    modules += [ "hdf_drivers" ]
   }
 }
