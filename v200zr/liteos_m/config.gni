@@ -71,6 +71,7 @@ board_cflags = [
   "-DLOSCFG_BASE_CORE_HILOG",
   "-DPTHREAD_KEYS_MAX=128",
   "-DWIFI_STATE_NOT_AVALIABLE=0",
+  "-DTCP_USER_TIMEOUT=18",
 ]
 
 board_cxx_flags = board_cflags
@@ -105,6 +106,7 @@ if (wrap_fs_api == "true") {
 board_include_dirs = [
   "${ohos_root_path}device/soc/bestechnic/bes2600/liteos_m/sdk/bsp/include/rtos/liteos/liteos_m/kal/cmsis",
   "${ohos_root_path}commonlibrary/utils_lite/include",
+  "${ohos_root_path}base/iothardware/peripheral/interfaces/inner_api/",
 ]
 board_include_dirs += []
 
