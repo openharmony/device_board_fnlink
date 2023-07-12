@@ -20,8 +20,8 @@ if (ohos_kernel_type == "liteos_m") {
       "drivers",
       "shields",
     ]
-  }
-  if (defined(LOSCFG_DRIVERS_HDF_CONFIG_MACRO)) {
-    modules += [ "hdf_drivers" ]
+    if (defined(LOSCFG_DRIVERS_HDF_CONFIG_MACRO)) {
+      modules += [ "hdf_drivers" ]
+    }
   }
 }
